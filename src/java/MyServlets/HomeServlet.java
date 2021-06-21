@@ -31,18 +31,17 @@ public class HomeServlet extends HttpServlet {
         
         //we make the session to get the username the user has inputted from the 
         //form text box(don forget to cast it to string)!!
-       
-        String getMyUser = (String) sesh.getAttribute("username");
+ 
         
         //validate the username
-        if ((getMyUser.equals("") || getMyUser == null)){
+        if (sesh.getAttribute("username")== null ){
             //so this is saying if the user name is empty send the user back to 
             // login page (REMEMBER UR NOT SUPPOSED TO FORWARD UR REDIRECTING!!)
             response.sendRedirect("login");
         } else {
             //send em back to home page 
-            
             getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
+            
         }
         
     }
