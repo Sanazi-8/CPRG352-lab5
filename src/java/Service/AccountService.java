@@ -18,7 +18,7 @@ public class AccountService {
         
         if ((username.equals("betty") || username.equals("adam")) && password.equals("password")){
             //creates a new user
-            return new User (username);
+            return new User (username, null);
         } 
         
         return null;
