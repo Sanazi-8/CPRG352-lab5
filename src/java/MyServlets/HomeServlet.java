@@ -37,20 +37,13 @@ public class HomeServlet extends HttpServlet {
         //validate the username
         if ((getMyUser.equals("") || getMyUser == null)){
             //so this is saying if the user name is empty send the user back to 
-            // login page 
-            
-            getServletContext().getRequestDispatcher("/web-INF/login.jsp").forward(request, response);
+            // login page (REMEMBER UR NOT SUPPOSED TO FORWARD UR REDIRECTING!!)
+            response.sendRedirect("login");
         } else {
             //send em back to home page 
             
-            getServletContext().getRequestDispatcher("/web-INF/login.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/web-INF/home.jsp").forward(request, response);
         }
-        
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
         
     }
 
