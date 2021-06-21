@@ -73,7 +73,7 @@ public class LoginServlet extends HttpServlet {
         else{
             //this indicates if the user name and pass are wrong
             //and are not the ones we enforced in "data" will get an error message
-            request.setAttribute("Error", "Sorry, your username or password are incorrect, please double check your inputs");
+            request.setAttribute("Error", "Sorry, your username or password are incorrect, please double check your password");
             //get em to login page again
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             

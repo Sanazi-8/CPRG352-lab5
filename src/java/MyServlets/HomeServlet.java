@@ -29,8 +29,6 @@ public class HomeServlet extends HttpServlet {
         //first create a session for the user
         HttpSession sesh = request.getSession(true);
 
- 
-        
         //validate the username
         if (sesh.getAttribute("username")== null ){
             //so this is saying if the user name is empty send the user back to 
