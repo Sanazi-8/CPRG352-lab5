@@ -28,16 +28,14 @@ public class HomeServlet extends HttpServlet {
             throws ServletException, IOException {
         //first create a session for the user
         HttpSession sesh = request.getSession(true);
-        
-        //we make the session to get the username the user has inputted from the 
-        //form text box(don forget to cast it to string)!!
+
  
         
         //validate the username
         if (sesh.getAttribute("username")== null ){
             //so this is saying if the user name is empty send the user back to 
-            // login page (REMEMBER UR NOT SUPPOSED TO FORWARD UR REDIRECTING!!)
-            response.sendRedirect("login");
+            // login page
+           getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         } else {
             //send em back to home page 
             getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
