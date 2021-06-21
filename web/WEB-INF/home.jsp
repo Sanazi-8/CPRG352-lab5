@@ -12,9 +12,12 @@
         <title>Welcome Page</title>
     </head>
     <body>
+        
         <h1>Home Page</h1>
         
+        <form method="POST" action="home">
         <p>Hello ${username}</p>
         <a href="login?logout" > Log out </a>
+        </form>
     </body>
 </html>

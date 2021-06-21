@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form>
+        <form method="POST" action="login">
             <label> Username: </label>
             <input type="text" name="username" value="${username}">
             <br>
