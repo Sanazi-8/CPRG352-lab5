@@ -42,7 +42,7 @@ public class HomeServlet extends HttpServlet {
         } else {
             //send em back to home page 
             
-            getServletContext().getRequestDispatcher("/web-INF/home.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
         }
         
     }
